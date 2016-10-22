@@ -1,0 +1,49 @@
+<hr>
+
+<div class="container padding-inside-top-md padding-inside-bottom-md padding-outside-top-md">
+    <div class="row">
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-primary btn-block" href = "https://localhost3000/play_rock">
+                      Play Rock
+                    </button>
+        </div>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-primary btn-block" href = "https://localhost3000/play_paper">
+                      Play Paper
+                    </button>
+        </div>
+        <div class="col-md-4">
+          <button type="submit" class="btn btn-primary btn-block" href = "https://localhost3000/play_scissors">
+                      Play Scissors
+                    </button>
+        </div>
+    </div>
+
+<!-- <a class="btn btn-default" href="#" role="button">Link</a> -->
+
+<hr>
+
+    <div class="row">
+        <div class="col-md-6"></div>
+        <div class="col-md-6"></div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12"></div>
+    </div>
+</div>
+
+
+
+
+<p> You played Rock. </p>
+
+
+<p>
+  The computer played <%= @computer_move %>.
+</p>
+
+
+<% if @computer_move == "rock" %>
+<h3> You tied! </h3>
+
+<% end %>
