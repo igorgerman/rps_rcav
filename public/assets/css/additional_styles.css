@@ -1,8 +1,5 @@
 /* Additional styles */
 
-body {
-  font-family: "Open Sans";
-}
 
 /* My standard vertical spacing classes */
 
@@ -126,4 +123,9 @@ body {
 
 .center-text {
   text-align: center;
+}
+
+.result-font {
+  font-size: 30px;
+  font-weight: bold;
 }

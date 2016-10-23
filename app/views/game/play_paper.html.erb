@@ -52,15 +52,15 @@
         <div class="col-xs-12">
            <div class="col-md-offset-4 col-md-4 margin-above-top-md margin-below-bottom-md">
           <% if @computer_move == "paper" %>
-          <button  class="btn btn-primary btn-block">
+          <button  class="btn btn-primary btn-block result-font">
                       You Tie
                     </button>
           <% elsif @computer_move == "scissors" %>
-          <button  class="btn btn-warning btn-block" href = "http://localhost:3000/scissors">
+          <button  class="btn btn-warning btn-block result-font" href = "http://localhost:3000/scissors">
                       You Lose
                     </button>
           <% else %>
-          <button  class="btn btn-success btn-block" href = "http://localhost:3000/scissors">
+          <button  class="btn btn-success btn-block result-font" href = "http://localhost:3000/scissors">
                       You Win
                     </button>
                     </div>
