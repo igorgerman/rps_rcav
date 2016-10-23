@@ -1,49 +1,72 @@
-<hr>
 
 <div class="container padding-inside-top-md padding-inside-bottom-md padding-outside-top-md">
+  <hr>
+
     <div class="row">
         <div class="col-md-4">
-          <button type="submit" class="btn btn-primary btn-block" href = "https://localhost3000/play_rock">
-                      Play Rock
-                    </button>
+          <a href="http://localhost:3000/rock" class="btn btn-primary btn-block">Play Rock</a>
         </div>
         <div class="col-md-4">
-          <button type="submit" class="btn btn-primary btn-block" href = "https://localhost3000/play_paper">
-                      Play Paper
-                    </button>
+          <a href="http://localhost:3000/paper" class="btn btn-info btn-block">Play Paper</a>
         </div>
         <div class="col-md-4">
-          <button type="submit" class="btn btn-primary btn-block" href = "https://localhost3000/play_scissors">
-                      Play Scissors
-                    </button>
+          <a href="http://localhost:3000/scissors" class="btn btn-primary btn-block">Play Scissors</a>
         </div>
     </div>
-
-<!-- <a class="btn btn-default" href="#" role="button">Link</a> -->
 
 <hr>
 
     <div class="row">
-        <div class="col-md-6"></div>
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+          <div class="panel panel-success center-text">
+            <div class="panel-heading">
+              <h3 class="panel-title">Rock</h3>
+            </div>
+            <div class="panel-body">
+                <img src="http://localhost:3000/assets/images/rock.png" height="400"/>
+            </div>
+          </div>
+
+        </div>
+        <div class="col-md-6">
+          <div class="panel panel-danger center-text">
+            <div class="panel-heading">
+              <h3 class="panel-title"> #{@computer_move}</h3>
+            </div>
+            <div class="panel-body">
+              <% if @computer_move == "rock" %>
+              <img src="http://localhost:3000/assets/images/rock.png" height="400"/>
+              <% elsif @computer_move == "paper" %>
+              <img src="http://localhost:3000/assets/images/paper.png" height="400"/>
+              <% else %>
+              <img src="http://localhost:3000/assets/images/scissors.png" height="400"/>
+              <% end %>
+            </div>
+          </div>
+        </div>
     </div>
-    <div class="row">
-        <div class="col-xs-12"></div>
+
+<!-- result -->
+
+    <div class="row grayback">
+        <div class="col-xs-12">
+           <div class="col-md-offset-4 col-md-4 margin-above-top-md margin-below-bottom-md">
+          <% if @computer_move == "rock" %>
+          <button  class="btn btn-primary btn-block">
+                      You Tie
+                    </button>
+          <% elsif @computer_move == "paper" %>
+          <button  class="btn btn-warning btn-block" href = "http://localhost:3000/scissors">
+                      You Lose
+                    </button>
+          <% else %>
+          <button  class="btn btn-success btn-block" href = "http://localhost:3000/scissors">
+                      You Win
+                    </button>
+                    </div>
+          <% end %>
+
+
+        </div>
     </div>
 </div>
-
-
-
-
-<p> You played Rock. </p>
-
-
-<p>
-  The computer played <%= @computer_move %>.
-</p>
-
-
-<% if @computer_move == "rock" %>
-<h3> You tied! </h3>
-
-<% end %>

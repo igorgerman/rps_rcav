@@ -4,6 +4,10 @@ class GameController < ApplicationController
 
     @computer_move = moves.sample
 
+    if @computer_move == "rock"
+      @computer_image = "http://localhost:3000/assets/images/rock.png"
+    end
+
     render("game/play_rock.html.erb")
   end
 
