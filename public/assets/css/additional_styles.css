@@ -84,7 +84,14 @@
 }
 
 .grayback {
-  background-color: #f7f8f9;
+  background-color: #D8D4D8;
+  border-style: solid thin;
+  border-color: #C1BFC1;
+  border-radius: 0px;
+}
+
+.roundy {
+  border-radius: rounded
 }
 
 .navblue {
