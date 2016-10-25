@@ -10,7 +10,7 @@ get("/scissors", {:controller => "game", :action => "user_plays_scissors"})
 
 
 
-
+ #sync test
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
